@@ -1,0 +1,480 @@
+/*basic page setup*/
+html{
+    height:100%;
+}
+/*basic page setup*/
+
+body{    
+    
+    padding:0px;
+    margin:0px;
+    height:100%;
+
+}
+.item1 { 
+    grid-area: header; 
+}
+/* styling for logo code */
+.header{
+
+font-family: Work Sans;
+font-style: normal;
+font-weight: 900;
+font-size: 50px;
+line-height: 150px;
+text-align: center;
+letter-spacing: 0.11em;
+color: #202020;
+height:150px;
+}
+
+/*navcode*/
+.nav{
+    grid-area: nav;
+    background-color:#307EA1;
+    height:50px;
+    text-align:center;    
+}
+ul{
+    list-style-type: none;
+    height:100%;
+    margin:0px;
+}
+li{
+    height:50px;
+    margin:auto;
+    
+}
+/*text-styling*/
+a{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #3E3E3E;
+    text-decoration: none;
+    padding-left: 28px;
+    padding-right: 28px;
+    display:inline-block;
+    position:relative;
+
+}
+/*hover code*/
+
+a::after{
+    content: "";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:4px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease-in;
+}
+a:hover::after{
+    transform:scaleX(1);
+}
+.dropdown-link::after{
+    height:2px !important;
+}
+
+a:hover{
+    background-color:#00A8BD;
+}
+.home_link{
+    background-color:#2FD2C6;
+}
+/*dropdown button */
+.dropdown {
+    display:inline-block;
+    height:50px;
+}
+.dropdown:hover{
+    background-color:#00A8BD;
+}
+
+.dropdown .dropbtn {
+    font-size: 24px;  
+    border: none;
+    outline: none;
+    color: #3E3E3E;
+    padding-left: 28px;
+    padding-right: 28px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    letter-spacing: 0.1em;
+    font-weight:600;
+    font-family: Work Sans;
+    font-style:normal;
+    height:50px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight:300;
+}
+
+.dropdown-content a:hover {
+    background-color: #00A8BD;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*end of nav code*/
+/* code for page setup */
+.item3 {
+    grid-area: main;
+    min-height:100vh;
+}
+/* code for page setup */
+.aside { 
+    grid-area: right;
+    background-color:#C9F7FF;
+    min-width:300px;
+    max-width:301px;    
+    padding:0px;
+    float:right;
+    right:0;
+    margin:0px;
+    position:relative;
+}
+/* code for page setup */
+.item5 {
+    grid-area: footer; 
+    position:static;
+    bottom:0;
+    width:100%;
+    background-color:#307EA1;
+}
+/*main page setup*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "main main main main right right"
+    "footer footer footer footer footer footer";
+  grid-gap: 0px;
+  background-color:white;
+  padding: 0px;
+}
+/*makes sure everything is based of the edge of the page*/
+.grid-container > div {
+  
+  padding: 0px;
+  
+}
+/*end of main page setup*/
+/*styling for main image and text on index.php*/
+.main-grid{
+    display:grid;
+    grid-template-areas:
+        "text image"
+        "line line"
+        "clubs button";
+    padding-right:0px;
+    padding-left:0px;
+    padding-top:32px;
+}
+
+.text_item{
+    grid-area:text;
+    padding-top:40px;
+    padding:20px;
+    padding-left:55px;
+}
+.image_item{
+    grid-area:image; 
+    padding-right:35px;
+}
+/*styling for a age break */
+.line{
+    grid-area:line;
+    height:5px;
+    background-color:#3E3E3E;
+    width:100%;
+    margin-top:80px;
+}
+/*styling for club information and button */
+.club_text{
+    grid-area:clubs;
+    padding-top:80px;
+    padding-left:35px;
+    padding-bottom: 80px;
+}
+.club_button_area{
+    grid-area:button;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.mainimg{
+    height:275px;
+}
+.club_button{
+    height:50px;
+    width:400px;
+    background-color:#C9F7FF;
+    margin-top:100px;
+    position:relative;
+    
+}
+.clubs_link{
+    all:initial;
+}
+.clubs_link:hover{
+    all:initial;
+    cursor:pointer;
+}
+.clubs_link:hover::after{
+    all:initial;
+}
+.club_button::after{
+    content: "";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:4px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease-in;
+}
+.club_button:hover::after{
+    transform:scaleX(1);
+}
+.clubs_text{
+    text-align:center;
+    line-height:50px;
+}
+/* end of styling for main image and text on idex.php*/
+/*styling for footer*/
+.footer-grid{
+    display:grid;
+    grid-template-areas:
+        "title socials";
+    padding-right:60px;
+    padding-top:60px;
+    padding-left:60px;
+    height:150px;
+}
+.title_item{
+    grid-area: title;
+    float:left;
+
+}
+.socials_item{
+    grid-area: socials;
+
+}
+/* end of styling for footer*/
+/*styling for calendar box in aside*/
+.calendar{
+padding:15px;
+}
+
+/* styling for header*/
+h2{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 0%;
+    /* or 0px */
+
+    letter-spacing: 0.085em;
+    color: #000000;
+    text-align: left;
+}
+/* styling for sub header */
+h3{
+    font-family: Work Sans;
+    font-style: normal ;
+    font-weight:600;
+    font-size: 18px;
+    text-align: right;
+    color: #000000;
+}
+
+/* styling for regular text */
+p{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 39px;
+    color: #000000;
+    text-align: right;
+}
+
+.index_txt{
+    text-align: left !important;
+}
+.form{
+    text-align: center;
+}
+
+/* code for events list */
+
+.tilesWrap {
+	padding: 0;
+	margin: 100px 7px 50px;
+	list-style: none;
+	text-align: center;
+}
+.tilesWrap li {
+	display: inline-block;
+	width: 20%;
+	min-width: 200px;
+	max-width: 230px;
+	padding: 80px 25px 40px;
+	position: relative;
+	vertical-align: top;
+	margin: 10px;
+	font-family: 'helvetica', san-serif;
+	min-height: 40vh;
+	background: #ebebeb;
+	border: 1px solid #252727;
+	text-align: left;
+}
+.tilesWrap li h2 {
+	font-size: 80px;
+	margin: 0;
+	position: absolute;
+	opacity: 0.2;
+	top: 50px;
+	right: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.tilesWrap li h3 {
+	font-size: 20px;
+	color: #3E3E3E;
+	margin-bottom: 5px;
+    line-height:20px;
+}
+.tilesWrap li p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #3E3E3E;
+	margin-top: 5px;
+}
+.tilesWrap li button {
+	background: transparent;
+	border: 1px solid #b7b7b7;
+	padding: 10px 20px;
+	color: #b7b7b7;
+	border-radius: 3px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	transform: translateY(-40px);
+	opacity: 0;
+	cursor: pointer;
+	overflow: hidden;
+}
+.tilesWrap li button:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 120%;
+	top: 0;
+	opacity: 0;
+	left: -140px;
+	border-radius: 0 20px 20px 0;
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+	
+}
+.tilesWrap li:hover button {
+	transform: translateY(5px);
+	opacity: 1;
+}
+.tilesWrap li button:hover {
+	color: #262a2b;
+}
+
+.tilesWrap li button:hover:before {
+	left: 0;
+	opacity: 1;
+}
+.tilesWrap li:hover h2 {
+	top: 0px;
+	opacity: 0.6;
+}
+
+.tilesWrap li:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	z-index: -1;
+	background: #fff;
+	transform: skew(2deg, 2deg);
+}
+.tilesWrap li:after {
+	content: '';
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(255, 255, 255, 0.02);
+}
+
+/* for the poll */
+
+#poll{
+    padding:30px;
+    line-height:20px;
+    text-align:left;
+}
+.poll_text{
+    text-align:left !important;
+}
+/* sets all styling to none */
+.none{
+    all:initial;
+}
+.none:hover{
+    all:initial;
+}
+.none::after{
+    all:initial;
+}
+.none:hover::after{
+    all:initial;
+}
+/* styling for underconstruction image */
+.img_1{
+    text-align:center;
+    display:inline;
+}
+#images_aside{
+    max-width:none !important;
+}
+
+
+
+
+
+
